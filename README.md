@@ -1,6 +1,7 @@
 # craco-mf
 
 Module federation support for CRA5 applications without ejecting and losing update support of react-scripts.
+
 Fork of [hasanayan/craco-module-federation](https://github.com/hasanayan/craco-module-federation), which appears to be unmaintained/abandoned.
 
 ## Prerequisites
@@ -85,4 +86,6 @@ There are two test apps in this repository inside test folder (app1 and app2). I
 
 ## License
 
-Licensed under the MIT License, Copyright ©️ 2021 Hasan Ayan. See [LICENSE.md](LICENSE) for more information.
+Licensed under the MIT License, Copyright ©️ 2022 Brandon Faulkner. See [LICENSE.md](LICENSE) for more information.
+
+Original author [Hasan Ayan](https://github.com/hasanayan)

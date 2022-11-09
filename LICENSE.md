@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2019 WonbaeLee
+Copyright for portions of `craco-mf` are held by [Hasan Ayan, 2021] as part of project `hasanayan/craco-module-federation`. 
+All other copyright for `craco-mf` are held by [Brandon Faulkner, 2022].
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
