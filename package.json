@@ -1,0 +1,40 @@
+{
+  "name": "craco-mf",
+  "version": "1.0.0",
+  "description": "Module federation support for CRA5 applications without ejecting",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfaulk96/craco-mf.git"
+  },
+  "keywords": [
+    "module-federation",
+    "craco",
+    "cra5",
+    "cra",
+    "create-react-app"
+  ],
+  "author": "hasanayan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bfaulk96/craco-mf/issues"
+  },
+  "homepage": "https://github.com/bfaulk96/craco-mf#readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@craco/craco": "^7"
+  },
+  "peerDependencies": {
+    "webpack": "^5",
+    "react-scripts": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^16",
+    "@types/webpack": "^5"
+  }
+}
