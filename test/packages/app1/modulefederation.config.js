@@ -20,5 +20,10 @@ module.exports = {
       singleton: true,
       requiredVersion: deps["react-dom"],
     },
+    'shared-library': {
+      singleton: true,
+      import: '../shared-library',
+      requiredVersion: require('../shared-library/package.json').version,
+    },
   },
 };

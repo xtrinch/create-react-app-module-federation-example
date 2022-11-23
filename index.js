@@ -1,5 +1,6 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const paths = require("react-scripts/config/paths");
+const FederatedTypesPlugin = require('@module-federation/typescript');
 
 const getModuleFederationConfigPath = (additionalPaths = []) => {
   const path = require("node:path");

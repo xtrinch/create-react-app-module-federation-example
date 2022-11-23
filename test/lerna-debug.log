@@ -1,0 +1,16 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'lerna',
+0 silly argv   pkg: ',.app1'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath /home/xtrinch/repos/craco-mf/test
+3 error Error: Invalid tag name ",.app1": Tags may not have any characters that encodeURIComponent encodes.
+3 error     at invalidTagName (/home/xtrinch/repos/craco-mf/test/node_modules/npm-package-arg/npa.js:91:15)
+3 error     at fromRegistry (/home/xtrinch/repos/craco-mf/test/node_modules/npm-package-arg/npa.js:296:13)
+3 error     at resolve (/home/xtrinch/repos/craco-mf/test/node_modules/npm-package-arg/npa.js:81:12)
+3 error     at npa (/home/xtrinch/repos/craco-mf/test/node_modules/npm-package-arg/npa.js:52:10)
+3 error     at AddCommand.initialize (/home/xtrinch/repos/craco-mf/test/node_modules/@lerna/add/index.js:39:17)
+3 error     at /home/xtrinch/repos/craco-mf/test/node_modules/@lerna/command/index.js:272:24

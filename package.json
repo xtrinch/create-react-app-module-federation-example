@@ -27,11 +27,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@craco/craco": "^7"
+    "@craco/craco": "^7",
+    "@module-federation/typescript": "^2.0.0"
   },
   "peerDependencies": {
-    "webpack": "^5",
-    "react-scripts": "^5"
+    "react-scripts": "^5",
+    "webpack": "^5"
   },
   "devDependencies": {
     "@types/node": "^16",
