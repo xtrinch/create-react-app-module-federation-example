@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 export default React.createContext({
-    name: 'Mr.Noname' as string,
-    setName: (name: string) => {},
+  name: "Mr.Noname" as string,
+  setName: (name: string) => {},
 });
