@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "@cloudbeds/webpack-module-federation-types-plugin": "^1.11.2",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^12.1.2",
         "@testing-library/user-event": "^13.2.1",

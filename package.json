@@ -12,7 +12,5 @@
   },
   "name": "test",
   "dependencies": {
-    "@cloudbeds/webpack-module-federation-types-plugin": "^1.11.2",
-    "typescript": "^4.9.3"
   }
 }
