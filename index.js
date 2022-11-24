@@ -1,6 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const paths = require("react-scripts/config/paths");
-const FederatedTypesPlugin = require('@module-federation/typescript');
+const { ModuleFederationTypesPlugin } = require( '@cloudbeds/webpack-module-federation-types-plugin' );
+const { join } = require("node:path");
 
 const getModuleFederationConfigPath = (additionalPaths = []) => {
   const path = require("node:path");
@@ -9,7 +10,7 @@ const getModuleFederationConfigPath = (additionalPaths = []) => {
   const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
   const moduleFederationConfigFiles = [
-    "modulefederation.config.js",
+    "federation.config.js",
     ...additionalPaths,
   ];
   return moduleFederationConfigFiles
@@ -39,19 +40,23 @@ module.exports = {
         excludeChunks: [require(moduleFederationConfigPath).name],
       };
 
+      // debug logs
+      // webpackConfig.infrastructureLogging = {
+      //   level: 'log'
+      // }
+
+      if (!webpackConfig.output) {
+        webpackConfig.output = {}
+      }
+      webpackConfig.output.path = join(process.cwd(), "public")
+
       webpackConfig.plugins = [
         ...webpackConfig.plugins,
         new ModuleFederationPlugin(require(moduleFederationConfigPath)),
+        new ModuleFederationTypesPlugin({
+          downloadTypesWhenIdleIntervalInSeconds: 10,
+        }),
       ];
-
-      // webpackConfig.module = {
-      //   ...webpackConfig.module,
-      //   generator: {
-      //     "asset/resource": {
-      //       publicPath: paths.publicUrlOrPath,
-      //     },
-      //   },
-      // };
     }
     return webpackConfig;
   },

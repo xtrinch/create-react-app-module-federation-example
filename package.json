@@ -27,8 +27,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@cloudbeds/webpack-module-federation-types-plugin": "^1.11.2",
     "@craco/craco": "^7",
-    "@module-federation/typescript": "^2.0.0"
+    "typescript": "^4.9.3"
   },
   "peerDependencies": {
     "react-scripts": "^5",

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
-//@ts-expect-error
 import Button from "app2/Button";
 import OwnButton from "./Button";
 
 import styled from "styled-components";
-//@ts-expect-error
-import { NameContextProvider } from 'shared-library';
+import NameContextProvider from 'library/NameContextProvider';
 
 function App() {
   const [name, setName] = useState("Mojca");

@@ -89,3 +89,10 @@ There are two test apps in this repository inside test folder (app1 and app2). I
 Licensed under the MIT License, Copyright ©️ 2022 Brandon Faulkner. See [LICENSE.md](LICENSE) for more information.
 
 Original author [Hasan Ayan](https://github.com/hasanayan)
+
+# TODO
+- wait for response on PR of https://github.com/cloudbeds/webpack-module-federation-types-plugin,
+if that is resolved, this could be made into an example repository using the original 
+craco-mf + webpack-module-federation-types-plugin.
+- move back to single scope for all three apps
+- figure out how to build this for production

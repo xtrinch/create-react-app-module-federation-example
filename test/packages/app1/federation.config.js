@@ -8,6 +8,7 @@ module.exports = {
   },
   remotes: {
     app2: "app2@http://localhost:3002/remoteEntry.js",
+    ['library']: "library@http://localhost:3003/remoteEntry.js",
   },
   filename: "remoteEntry.js",
   shared: {
@@ -20,10 +21,10 @@ module.exports = {
       singleton: true,
       requiredVersion: deps["react-dom"],
     },
-    'shared-library': {
-      singleton: true,
-      import: '../shared-library',
-      requiredVersion: require('../shared-library/package.json').version,
-    },
+    // 'library': {
+    //   singleton: true,
+    //   import: '../library',
+    //   requiredVersion: require('../library/package.json').version,
+    // },
   },
 };

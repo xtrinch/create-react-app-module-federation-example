@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import "./style.scss";
-//@ts-expect-error
-import { NameContextProvider } from 'shared-library';
+import NameContextProvider from 'library/NameContextProvider';
 
 const Button: FC<{ className?: string }> = ({ className = "" }) => {
   const ctx = React.useContext(NameContextProvider) as any;

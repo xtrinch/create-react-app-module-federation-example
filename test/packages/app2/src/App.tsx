@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "./Button";
-//@ts-expect-error
-import { NameContextProvider } from 'shared-library';
+import NameContextProvider from 'library/NameContextProvider';
 
 function App() {
+  console.log(NameContextProvider)
   const ctx = React.useContext(NameContextProvider) as any;
 
   return <>{ctx.name}<Button /></>;

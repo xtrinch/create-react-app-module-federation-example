@@ -1,9 +1,11 @@
 const deps = require("./package.json").dependencies;
 
+console.log(process.env.ROOT_PATH_MODE);
 module.exports = {
-  name: "app2",
+  name: "library",
   exposes: {
-    "./Button": "./src/Button",
+    "./NameContextProvider": "./src/NameContextProvider.ts",
+    "./SurnameContextProvider": "./src/SurnameContextProvider.ts",
   },
   filename: "remoteEntry.js",
   shared: {
@@ -15,11 +17,6 @@ module.exports = {
     "react-dom": {
       singleton: true,
       requiredVersion: deps["react-dom"],
-    },
-    'shared-library': {
-      singleton: true,
-      import: '../shared-library',
-      requiredVersion: require('../shared-library/package.json').version,
     },
   },
 };
