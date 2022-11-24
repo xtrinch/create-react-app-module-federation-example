@@ -24,7 +24,7 @@
     "scripts": {
         "start": "cp ../../../index.js ./plugin.js && craco start",
         "build": "cp ../../../index.js ./plugin.js && craco build",
-        "serve": "npm run build && serve -s build -p 3000",
+        "serve": "npm run build && serve -s build -p 3003",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },

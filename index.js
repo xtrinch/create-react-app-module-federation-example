@@ -48,6 +48,7 @@ module.exports = {
       if (!webpackConfig.output) {
         webpackConfig.output = {}
       }
+      // this is incorrect for building, but needed for federation types
       webpackConfig.output.path = join(process.cwd(), "public")
 
       webpackConfig.plugins = [

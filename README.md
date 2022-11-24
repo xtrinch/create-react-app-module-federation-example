@@ -94,5 +94,4 @@ Original author [Hasan Ayan](https://github.com/hasanayan)
 - wait for response on PR of https://github.com/cloudbeds/webpack-module-federation-types-plugin,
 if that is resolved, this could be made into an example repository using the original 
 craco-mf + webpack-module-federation-types-plugin.
-- move back to single scope for all three apps
 - figure out how to build this for production
