@@ -22,8 +22,8 @@
         "react": "^17.0.2"
     },
     "scripts": {
-        "start": "cp ../../../index.js ./plugin.js && craco start",
-        "build": "cp ../../../index.js ./plugin.js && craco build",
+        "start": "craco start",
+        "build": "craco build",
         "serve": "npm run build && serve -s build -p 3003",
         "test": "react-scripts test",
         "eject": "react-scripts eject"

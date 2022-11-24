@@ -90,8 +90,10 @@ Licensed under the MIT License, Copyright ©️ 2022 Brandon Faulkner. See [LICE
 
 Original author [Hasan Ayan](https://github.com/hasanayan)
 
+# Flaws
+When building for production, `webpackConfig.output.path = join(process.cwd(), "public")` should not be executed, because the build will end up in the wrong folder, see https://github.com/cloudbeds/webpack-module-federation-types-plugin/issues/23!
+
 # TODO
 - wait for response on PR of https://github.com/cloudbeds/webpack-module-federation-types-plugin,
 if that is resolved, this could be made into an example repository using the original 
 craco-mf + webpack-module-federation-types-plugin.
-- figure out how to build this for production

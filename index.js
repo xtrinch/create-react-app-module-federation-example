@@ -48,7 +48,7 @@ module.exports = {
       if (!webpackConfig.output) {
         webpackConfig.output = {}
       }
-      // this is incorrect for building, but needed for federation types
+      // this is incorrect for building, but needed for federation types, see https://github.com/cloudbeds/webpack-module-federation-types-plugin/issues/23
       webpackConfig.output.path = join(process.cwd(), "public")
 
       webpackConfig.plugins = [
