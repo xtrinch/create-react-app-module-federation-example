@@ -1,10 +1,18 @@
 import React from "react";
-import NameContextProvider from 'library/NameContextProvider';
 
-const Button = () => {
-    const ctx = React.useContext(NameContextProvider) as any;
+import NameContextProvider from "library/NameContextProvider";
 
-return (<button onClick={()=>{
-    ctx.setName("Lojza")
-}}>{ctx.name}: Hello from app1</button>) };
+const Button = (props: { text: string }) => {
+  const ctx = React.useContext(NameContextProvider);
+
+  return (
+    <button
+      onClick={() => {
+        ctx.setName("Lojza");
+      }}
+    >
+      {props.text}
+    </button>
+  );
+};
 export default Button;

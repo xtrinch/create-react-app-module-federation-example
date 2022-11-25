@@ -1,4 +1,6 @@
 declare module "app1/Button" {
-    const Button: () => JSX.Element;
+    const Button: (props: {
+        text: string;
+    }) => JSX.Element;
     export default Button;
 }

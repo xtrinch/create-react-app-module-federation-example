@@ -1,30 +1,53 @@
+import Button from "library/Button";
 import React, { useState } from "react";
 import "./App.css";
-import Button from "app2/Button";
 import OwnButton from "./Button";
 
-import styled from "styled-components";
-import NameContextProvider from 'library/NameContextProvider';
+import NameContextProvider from "library/NameContextProvider";
+
+import App2 from "app2/App2Index";
+
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+} from "react-router-dom";
+
+const app1RoutingPrefix = "app2";
 
 function App() {
   const [name, setName] = useState("Mojca");
 
   return (
     <div className="App">
-      This is app1
-      <NameContextProvider.Provider value={{ name, setName }}>
-        <React.Suspense fallback="loading">
-          <Button />
-          <OwnButton />
-          <StyledButton />
-        </React.Suspense>
-      </NameContextProvider.Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                Hello {name}. This is app1 - container app
+                <NameContextProvider.Provider value={{ name, setName }}>
+                  <React.Suspense fallback="loading">
+                    <OwnButton text="Change name" />
+                    <div>
+                      <Button />
+                    </div>
+                    <Outlet />
+                  </React.Suspense>
+                </NameContextProvider.Provider>
+              </div>
+            }
+          >
+            <Route index element={<Navigate to={`/${app1RoutingPrefix}`} />} />
+            <Route path={`/${app1RoutingPrefix}`} element={<App2 />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-const StyledButton = styled(Button)`
-  color: blue;
-`;
 
 export default App;
