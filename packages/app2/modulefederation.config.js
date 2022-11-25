@@ -3,7 +3,8 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "app2",
   exposes: {
-    "./Button": "./src/Button/index",
+    './routes': './src/routes',
+    './App2Index': './src/App',
   },
   filename: "remoteEntry.js",
   remotes: {
@@ -19,10 +20,5 @@ module.exports = {
       singleton: true,
       requiredVersion: deps["react-dom"],
     },
-    // 'library': {
-    //   singleton: true,
-    //   import: '../library',
-    //   requiredVersion: require('../library/package.json').version,
-    // },
   },
 };
