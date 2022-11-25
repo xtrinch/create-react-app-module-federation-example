@@ -5,6 +5,7 @@ module.exports = {
   exposes: {
     "./NameContextProvider": "./src/NameContextProvider.ts",
     "./SurnameContextProvider": "./src/SurnameContextProvider.ts",
+    "./Button": "./src/Button/index",
   },
   filename: "remoteEntry.js",
   shared: {
