@@ -22,3 +22,12 @@ declare module "library/Button" {
     }>;
     export default Button;
 }
+declare module "library/Logo" {
+    import { FC } from "react";
+    import { CSSProperties } from "styled-components";
+    const Logo: FC<{
+        className?: string;
+        style?: CSSProperties;
+    }>;
+    export default Logo;
+}

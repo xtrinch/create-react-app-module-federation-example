@@ -1,8 +1,8 @@
-import Button from "library/Button";
 import React, { useState } from "react";
 import "./App.css";
 import OwnButton from "./Button";
 
+import Logo from "library/Logo";
 import NameContextProvider from "library/NameContextProvider";
 
 import App2 from "app2/App2Index";
@@ -31,10 +31,8 @@ function App() {
                 Hello {name}. This is app1 - container app
                 <NameContextProvider.Provider value={{ name, setName }}>
                   <React.Suspense fallback="loading">
+                    <Logo style={{ width: 90 }} />
                     <OwnButton text="Change name" />
-                    <div>
-                      <Button />
-                    </div>
                     <Outlet />
                   </React.Suspense>
                 </NameContextProvider.Provider>
