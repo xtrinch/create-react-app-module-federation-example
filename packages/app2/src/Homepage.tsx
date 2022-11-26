@@ -13,11 +13,16 @@ function Homepage() {
         path="/"
         element={
           <div>
-            <div>Hello {ctx.name} from app2!</div>
-            <Button
-              text="Click to change name"
-              onClick={() => ctx.setName("Jozica")}
-            />
+            <div style={{ marginBottom: 20 }}>
+              Hello again {ctx.name}. This is app2. The button &amp; context
+              used is from components app.
+            </div>
+            <div>
+              <Button
+                text="Change name from app2"
+                onClick={() => ctx.setName("Jozica")}
+              />
+            </div>
           </div>
         }
         index
