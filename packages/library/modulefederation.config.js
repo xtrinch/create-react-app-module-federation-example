@@ -4,7 +4,6 @@ module.exports = {
   name: "library",
   exposes: {
     "./NameContextProvider": "./src/NameContextProvider.ts",
-    "./SurnameContextProvider": "./src/SurnameContextProvider.ts",
     "./Button": "./src/components/Button",
     "./Logo": "./src/components/Logo",
   },
