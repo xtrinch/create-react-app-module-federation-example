@@ -3,8 +3,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "app2",
   exposes: {
-    './routes': './src/routes',
-    './App2Index': './src/App',
+    './App2Index': './src/Homepage',
   },
   filename: "remoteEntry.js",
   remotes: {

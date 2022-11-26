@@ -7,7 +7,7 @@ module.exports = {
     plugins: {
       add: [
         new ModuleFederationTypesPlugin({
-          downloadTypesWhenIdleIntervalInSeconds: 5,
+          downloadTypesWhenIdleIntervalInSeconds: 1,
         }),
       ]
     },

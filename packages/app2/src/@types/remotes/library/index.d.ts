@@ -19,6 +19,8 @@ declare module "library/Button" {
     import { FC } from "react";
     const Button: FC<{
         className?: string;
+        text: string;
+        onClick: () => void;
     }>;
     export default Button;
 }

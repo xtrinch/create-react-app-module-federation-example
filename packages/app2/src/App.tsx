@@ -1,18 +1,12 @@
-import Button from "library/Button";
+import { BrowserRouter } from "react-router-dom";
+import Homepage from "./Homepage";
 
-import NameContextProvider from "library/NameContextProvider";
-import React from "react";
-
-function App() {
-  console.log(NameContextProvider);
-  const ctx = React.useContext(NameContextProvider) as any;
-
+function App2() {
   return (
-    <>
-      <div>Hello {ctx.name} from app2!</div>
-      <Button />
-    </>
+    <BrowserRouter>
+      <Homepage />
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default App2;
