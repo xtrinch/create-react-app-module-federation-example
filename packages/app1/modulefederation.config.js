@@ -4,7 +4,6 @@ console.log(process.env.ROOT_PATH_MODE);
 module.exports = {
   name: "app1",
   exposes: {
-    "./Button": "./src/Button",
   },
   remotes: {
     app2: "app2@http://localhost:3002/remoteEntry.js",
@@ -21,10 +20,5 @@ module.exports = {
       singleton: true,
       requiredVersion: deps["react-dom"],
     },
-    // 'library': {
-    //   singleton: true,
-    //   import: '../library',
-    //   requiredVersion: require('../library/package.json').version,
-    // },
   },
 };

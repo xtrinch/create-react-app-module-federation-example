@@ -1,14 +1,14 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import styled from "styled-components";
-import NameContextProvider from "../NameContextProvider";
 
-const Button: FC<{ className?: string }> = ({ className = "" }) => {
-  const ctx = React.useContext(NameContextProvider) as any;
-
+const Button: FC<{ className?: string; text: string; onClick: () => void }> = ({
+  className = "",
+  text,
+  onClick,
+}) => {
   return (
-    <StyledButton className={"funny-button " + className}>
-      {ctx.name}
-      Hello from app2
+    <StyledButton onClick={onClick} className={"funny-button " + className}>
+      {text}
     </StyledButton>
   );
 };
@@ -17,6 +17,6 @@ export default Button;
 const StyledButton = styled.button`
   font-family: JeanSunHo;
   color: red;
-  font-size: 50px;
-  height: 80px;
+  font-size: 20px;
+  height: 40px;
 `;

@@ -13,7 +13,9 @@ module.exports = {
     },
     configure: (webpackConfig, { env, paths }) => {
       // this is incorrect for building, but needed for federation types, see https://github.com/cloudbeds/webpack-module-federation-types-plugin/issues/23
-      webpackConfig.output.path = join(process.cwd(), "public")
+
+      webpackConfig.devServer = { static: {} };
+      webpackConfig.devServer.static.directory = join(process.cwd(), "public");
       return webpackConfig;
     },
   },
