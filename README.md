@@ -6,6 +6,8 @@ form a single application seamlessly, with as little configuration as possible.
 This repository represents an example on how to use module federation with apps jumpstarted
 by `create-react-app` without ejecting the configuration.
 
+## Configuration
+
 There's very little configuration involved. There is however two important files in each repository:
 - `modulefedration.config.js` 
 
@@ -17,6 +19,8 @@ application.
 
 Craco is the Create React App Configuration Override, an easy and comprehensible configuration layer
 for create-react-app. This is the config for it to enable us to add plugins, see https://github.com/dilanx/craco.
+
+## The magic that makes this work
 
 The two webpack plugins that make this possible:
 - https://github.com/bfaulk96/craco-mf
@@ -57,6 +61,8 @@ Example for an app that uses a library build and is exposed to another container
   },
 }
 ```
+
+## What forms this example application
 
 There's three packages in this monorepo:
 - `library` (contains shared components)
