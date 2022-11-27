@@ -79,7 +79,7 @@ of the packages. Each of the apps can also be ran individually by running `yarn 
 in their respective folders (Provided you have also ran their dependencies, e.g. you need
 to run `library` to run `app2`).
 
-To start the app with lerna:
+To start the app with lerna, run in root of repository:
 `yarn run start`
 
 ## Building for production
@@ -87,4 +87,5 @@ To start the app with lerna:
 Production setup is prepared using docker & docker-compose. In this setup, each of the
 apps is served as a static production build served behind `nginx`.
 
+To start the app with docker-compose, run in root of repository:
 `docker-compose up`
