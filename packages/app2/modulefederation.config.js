@@ -7,7 +7,7 @@ module.exports = {
   },
   filename: "remoteEntry.js",
   remotes: {
-    library: "library@http://localhost:3003/remoteEntry.js",
+    library: `library@${process.env.LIBRARY_URL}/remoteEntry.js`,
   },
   shared: {
     ...deps,

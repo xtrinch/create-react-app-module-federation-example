@@ -6,8 +6,8 @@ module.exports = {
   exposes: {
   },
   remotes: {
-    app2: "app2@http://localhost:3002/remoteEntry.js",
-    ['library']: "library@http://localhost:3003/remoteEntry.js",
+    app2: `app2@${process.env.APP2_URL}/remoteEntry.js`,
+    library: `library@${process.env.LIBRARY_URL}/remoteEntry.js`,
   },
   filename: "remoteEntry.js",
   shared: {
