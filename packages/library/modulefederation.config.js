@@ -3,7 +3,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "library",
   exposes: {
-    "./NameContextProvider": "./src/NameContextProvider.ts",
+    "./NameContextProvider": "./src/components/NameContextProvider.ts",
     "./Button": "./src/components/Button",
     "./Logo": "./src/components/Logo",
   },

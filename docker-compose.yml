@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app1:
+    container_name: app1
+    build:
+      context: ./packages/app1
+    ports:
+      - '3001:80'
+  app2:
+    container_name: app2
+    build:
+      context: ./packages/app2
+    ports:
+      - '3002:80'
+  library:
+    container_name: library
+    build:
+      context: ./packages/library
+    ports:
+      - '3003:80'
