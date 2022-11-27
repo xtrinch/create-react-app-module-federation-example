@@ -8,17 +8,23 @@ by `create-react-app` without ejecting the configuration.
 
 There's very little configuration involved. There is however two important files in each repository:
 - `modulefedration.config.js` 
+
 This is webpack's module federation config, see https://webpack.js.org/concepts/module-federation
 for more information. Module federation enables us to use multiple separate builds to form a single
 application.
+
 - `craco.config.js` 
+
 Craco is the Create React App Configuration Override, an easy and comprehensible configuration layer
 for create-react-app. This is the config for it to enable us to add plugins, see https://github.com/dilanx/craco.
 
 The two webpack plugins that make this possible:
 - https://github.com/bfaulk96/craco-mf
+
 `craco-mf` enables us to use module federation in our CRA application.
+
 - https://github.com/cloudbeds/webpack-module-federation-types-plugin
+
 `@cloudbeds/webpack-module-federation-types-plugin`
 provides us with typesafe development - meaning our apps are not full of ts-ignores and we have
 an automatic system for sharing typings between the apps. This is necessary for any real-world
