@@ -27,4 +27,3 @@ yarn-error.log*
 
 /test/**/plugin.js
 .idea/
-.vscode/
