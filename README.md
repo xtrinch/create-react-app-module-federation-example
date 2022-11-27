@@ -6,6 +6,9 @@ form a single application seamlessly, with as little configuration as possible.
 This repository represents an example on how to use module federation with apps jumpstarted
 by `create-react-app` without ejecting the configuration.
 
+This is packed into a monorepo, but this is by no means a requirement. You could have each
+package in its own repository scattered across github.
+
 ## Configuration
 
 There's very little configuration involved. There is however two important files in each repository:
@@ -47,7 +50,7 @@ Example for an app that uses a library build and is exposed to another container
   },
   filename: "remoteEntry.js",
   remotes: {
-    library: "library@http://localhost:3003/remoteEntry.js",
+    library: `library@${process.env.LIBRARY_URL}/remoteEntry.js`,
   },
   shared: {
     react: {
@@ -82,10 +85,27 @@ to run `library` to run `app2`).
 To start the app with lerna, run in root of repository:
 `yarn run start`
 
+The same effect can be achieved with running `yarn run start` in each of the packages.
+
 ## Building for production
 
-Production setup is prepared using docker & docker-compose. In this setup, each of the
-apps is served as a static production build served behind `nginx`.
+In the following section, two alternatives for production deploy are presented.
+
+### Docker-compose
+
+Production setup example is prepared using docker & docker-compose. In this setup, each of the
+apps is its own container, which serves a static production build behind `nginx`.
 
 To start the app with docker-compose, run in root of repository:
 `docker-compose up`
+
+### S3
+
+If we were to deploy the applications to S3, we would deploy each application separately to its own S3, 
+each into their own respective buckets. The only configuration needed is to use the correct remote
+URLs in `.env` files in each of the packages, which would need to point to S3 URLs 
+instead of localhost URLs.
+
+E.g.:
+`LIBRARY_URL=http://library.s3-website-us-east-1.amazonaws.com`
+`APP2_URL=http://app2.s3-website-us-east-1.amazonaws.com`
