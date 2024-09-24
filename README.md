@@ -82,6 +82,8 @@ of the packages. Each of the apps can also be ran individually by running `yarn 
 in their respective folders (Provided you have also ran their dependencies, e.g. you need
 to run `library` to run `app2`).
 
+Firstly, install the required packages by running `yarn` in each of the `packages/` and in the root.
+
 To start the app with lerna, run in root of repository:
 `yarn run start`
 
